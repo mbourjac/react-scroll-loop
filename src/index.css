@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'MonumentGrotesk Mono';
+    src: url('@fonts/MonumentGrotesk-Mono.otf') format('opentype');
+  }
+
+  body {
+    @apply font-grotesk;
+  }
+}
