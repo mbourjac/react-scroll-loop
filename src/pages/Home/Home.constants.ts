@@ -12,6 +12,7 @@ export const initialGalleryImages: GalleryImage[] = [
   {
     id: 'lorem',
     src: lorem,
+    slug: 'lorem',
     title: 'Lorem',
     width: 'large',
     aspectRatio: 3 / 4,
@@ -22,6 +23,7 @@ export const initialGalleryImages: GalleryImage[] = [
   {
     id: 'ipsum',
     src: ipsum,
+    slug: 'ipsum',
     title: 'Ipsum',
     width: 'medium',
     aspectRatio: 2 / 3,
@@ -32,6 +34,7 @@ export const initialGalleryImages: GalleryImage[] = [
   {
     id: 'dolor',
     src: dolor,
+    slug: 'dolor',
     title: 'Dolor',
     width: 'large',
     aspectRatio: 2 / 3,
@@ -42,6 +45,7 @@ export const initialGalleryImages: GalleryImage[] = [
   {
     id: 'tempore',
     src: tempore,
+    slug: 'tempore',
     title: 'Tempore',
     width: 'x-large',
     aspectRatio: 3 / 4,
@@ -52,6 +56,7 @@ export const initialGalleryImages: GalleryImage[] = [
   {
     id: 'laborum',
     src: laborum,
+    slug: 'laborum',
     title: 'Laborum',
     width: 'large',
     aspectRatio: 3 / 2,
@@ -62,6 +67,7 @@ export const initialGalleryImages: GalleryImage[] = [
   {
     id: 'voluptas',
     src: voluptas,
+    slug: 'voluptas',
     title: 'Voluptas',
     width: 'large',
     aspectRatio: 2 / 3,
@@ -72,6 +78,7 @@ export const initialGalleryImages: GalleryImage[] = [
   {
     id: 'veritatis',
     src: veritatis,
+    slug: 'veritatis',
     title: 'Veritatis',
     width: 'medium',
     aspectRatio: 3 / 2,
@@ -82,6 +89,7 @@ export const initialGalleryImages: GalleryImage[] = [
   {
     id: 'pariatur',
     src: pariatur,
+    slug: 'pariatur',
     title: 'Pariatur',
     width: 'medium',
     aspectRatio: 2 / 3,

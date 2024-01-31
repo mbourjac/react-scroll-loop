@@ -1,6 +1,7 @@
 export interface GalleryImage {
   id: string;
   src: string;
+  slug: string;
   title: string;
   aspectRatio: number;
   width: 'small' | 'medium' | 'large' | 'x-large';

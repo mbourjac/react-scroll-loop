@@ -1,4 +1,5 @@
 import { forwardRef } from 'react';
+import { Link } from 'react-router-dom';
 import { cn } from '../../../lib/tailwind';
 import type { GalleryImage as GalleryImageType } from '../Home.types';
 
@@ -6,9 +7,20 @@ type GalleryImageProps = GalleryImageType & {
   index: number;
 };
 
-export const GalleryImage = forwardRef<HTMLImageElement, GalleryImageProps>(
+export const GalleryImage = forwardRef<HTMLAnchorElement, GalleryImageProps>(
   (
-    { id, src, title, aspectRatio, width, marginTop, alignment, zIndex, index },
+    {
+      id,
+      src,
+      slug,
+      title,
+      aspectRatio,
+      width,
+      marginTop,
+      alignment,
+      zIndex,
+      index,
+    },
     targetRef?,
   ) => {
     const widthMapping = {
@@ -35,19 +47,23 @@ export const GalleryImage = forwardRef<HTMLImageElement, GalleryImageProps>(
     };
 
     return (
-      <img
-        key={id}
-        src={src}
-        alt={title}
+      <Link
+        to={slug}
         className={cn(
-          'relative',
           widthMapping[width],
           alignmentMapping[alignment],
           index !== 0 && marginTopMapping[marginTop],
         )}
-        style={{ aspectRatio, zIndex }}
         ref={targetRef}
-      />
+      >
+        <img
+          key={id}
+          src={src}
+          alt={title}
+          className="relative"
+          style={{ aspectRatio, zIndex }}
+        />
+      </Link>
     );
   },
 );

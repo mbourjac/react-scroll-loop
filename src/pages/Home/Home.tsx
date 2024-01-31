@@ -12,7 +12,7 @@ export const Home = () => {
 
   const loopIteration = useRef(1);
 
-  const { targetRef, isVisible } = useIntersectionObserver<HTMLImageElement>({
+  const { targetRef, isVisible } = useIntersectionObserver<HTMLAnchorElement>({
     root: null,
     rootMargin: '0px',
     threshold: 0,
@@ -44,11 +44,11 @@ export const Home = () => {
 
   return (
     <div className="relative p-4">
-      <h1 className="fixed bottom-[16vw] left-[0.9vw] text-[calc(10vw+0.5rem)] font-bold leading-[0.8] mix-blend-overlay">
+      <h1 className="pointer-events-none fixed bottom-[16vw] left-[0.9vw] text-[calc(10vw+0.5rem)] font-bold leading-[0.8] mix-blend-overlay">
         Vitae <span className="sr-only">Delectus</span>
       </h1>
       <p
-        className="fixed bottom-[0.5vw] left-0 z-[3] text-[calc(18vw+0.5rem)] font-bold leading-[0.8] mix-blend-overlay"
+        className="pointer-events-none fixed bottom-[0.5vw] left-0 z-[3] text-[calc(18vw+0.5rem)] font-bold leading-[0.8] mix-blend-overlay"
         aria-hidden
       >
         Delectus
