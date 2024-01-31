@@ -1,7 +1,9 @@
-import { forwardRef } from 'react';
+import { forwardRef, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useMousePosition } from '../../../hooks/use-mouse-position';
 import { cn } from '../../../lib/tailwind';
 import type { GalleryImage as GalleryImageType } from '../Home.types';
+import { ImageTitle } from './ImageTitle';
 
 type GalleryImageProps = GalleryImageType & {
   index: number;
@@ -23,6 +25,10 @@ export const GalleryImage = forwardRef<HTMLAnchorElement, GalleryImageProps>(
     },
     targetRef?,
   ) => {
+    const [showTitle, setShowTitle] = useState(false);
+    const imageRef = useRef<HTMLImageElement>(null);
+    const mousePosition = useMousePosition();
+
     const widthMapping = {
       small: 'w-[10vw]',
       medium: 'w-[20vw]',
@@ -47,23 +53,37 @@ export const GalleryImage = forwardRef<HTMLAnchorElement, GalleryImageProps>(
     };
 
     return (
-      <Link
-        to={slug}
-        className={cn(
-          widthMapping[width],
-          alignmentMapping[alignment],
-          index !== 0 && marginTopMapping[marginTop],
+      <>
+        <Link
+          to={slug}
+          className={cn(
+            widthMapping[width],
+            alignmentMapping[alignment],
+            index !== 0 && marginTopMapping[marginTop],
+          )}
+          ref={targetRef}
+        >
+          <img
+            key={id}
+            src={src}
+            alt={title}
+            // eslint-disable-next-line jsx-a11y/mouse-events-have-key-events
+            onMouseOver={() => setShowTitle(true)}
+            // eslint-disable-next-line jsx-a11y/mouse-events-have-key-events
+            onMouseOut={() => setShowTitle(false)}
+            className="relative"
+            style={{ aspectRatio, zIndex }}
+            ref={imageRef}
+          />
+        </Link>
+        {showTitle && mousePosition && (
+          <ImageTitle
+            title={title}
+            zIndex={zIndex}
+            mousePosition={mousePosition}
+          />
         )}
-        ref={targetRef}
-      >
-        <img
-          key={id}
-          src={src}
-          alt={title}
-          className="relative"
-          style={{ aspectRatio, zIndex }}
-        />
-      </Link>
+      </>
     );
   },
 );

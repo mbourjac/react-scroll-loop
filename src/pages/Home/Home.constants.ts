@@ -50,7 +50,7 @@ export const initialGalleryImages: GalleryImage[] = [
     width: 'x-large',
     aspectRatio: 3 / 4,
     marginTop: 'positive',
-    zIndex: 4,
+    zIndex: 1,
     alignment: '100%',
   },
   {
@@ -61,7 +61,7 @@ export const initialGalleryImages: GalleryImage[] = [
     width: 'large',
     aspectRatio: 3 / 2,
     marginTop: 'negative',
-    zIndex: -1,
+    zIndex: 1,
     alignment: '0%',
   },
   {
