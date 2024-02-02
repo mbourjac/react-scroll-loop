@@ -12,7 +12,6 @@ type GalleryImageProps = GalleryImageType & {
 export const GalleryImage = forwardRef<HTMLAnchorElement, GalleryImageProps>(
   (
     {
-      id,
       src,
       slug,
       title,
@@ -64,7 +63,6 @@ export const GalleryImage = forwardRef<HTMLAnchorElement, GalleryImageProps>(
           ref={targetRef}
         >
           <img
-            key={id}
             src={src}
             alt={title}
             // eslint-disable-next-line jsx-a11y/mouse-events-have-key-events
