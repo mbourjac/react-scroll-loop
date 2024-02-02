@@ -9,6 +9,6 @@
   }
 
   body {
-    @apply font-grotesk;
+    @apply font-body;
   }
 }
