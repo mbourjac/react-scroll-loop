@@ -7,5 +7,5 @@ export interface GalleryImage {
   width: 'small' | 'medium' | 'large' | 'x-large';
   marginTop: 'negative' | 'null' | 'positive';
   alignment: '0%' | '15%' | '30%' | '50%' | '70%' | '85%' | '100%';
-  zIndex: number;
+  zIndex: 'under' | 'between' | 'over';
 }

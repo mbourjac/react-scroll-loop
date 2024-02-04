@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --heading-lower-z-index: 1;
+  --heading-greater-z-index: calc(var(--heading-lower-z-index) + 1);
+}
+
 @layer base {
   @font-face {
     font-family: 'MonumentGrotesk Mono';

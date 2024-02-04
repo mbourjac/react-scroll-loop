@@ -51,6 +51,12 @@ export const GalleryImage = forwardRef<HTMLAnchorElement, GalleryImageProps>(
       '100%': 'justify-self-end',
     };
 
+    const zIndexMapping = {
+      under: 'z-[calc(var(--heading-lower-z-index)-1)]',
+      between: 'z-[--heading-lower-z-index]',
+      over: 'z-[--heading-greater-z-index]',
+    };
+
     return (
       <>
         <Link
@@ -69,15 +75,15 @@ export const GalleryImage = forwardRef<HTMLAnchorElement, GalleryImageProps>(
             onMouseOver={() => setShowTitle(true)}
             // eslint-disable-next-line jsx-a11y/mouse-events-have-key-events
             onMouseOut={() => setShowTitle(false)}
-            className="relative"
-            style={{ aspectRatio, zIndex }}
+            className={cn('relative', zIndexMapping[zIndex])}
+            style={{ aspectRatio }}
             ref={imageRef}
           />
         </Link>
         {showTitle && mousePosition && (
           <ImageTitle
             title={title}
-            zIndex={zIndex}
+            zIndex={zIndexMapping[zIndex]}
             mousePosition={mousePosition}
           />
         )}

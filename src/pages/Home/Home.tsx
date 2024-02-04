@@ -32,11 +32,11 @@ export const Home = () => {
 
   return (
     <div className="relative p-4">
-      <h1 className="pointer-events-none fixed bottom-[16vw] left-[0.9vw] text-[calc(10vw+0.5rem)] font-bold leading-[0.8] mix-blend-overlay">
+      <h1 className="pointer-events-none fixed bottom-[16vw] left-[0.9vw] z-[--heading-lower-z-index] text-[calc(10vw+0.5rem)] font-bold leading-[0.8] mix-blend-overlay">
         Vitae <span className="sr-only">Delectus</span>
       </h1>
       <p
-        className="pointer-events-none fixed bottom-[0.5vw] left-0 z-[3] text-[calc(18vw+0.5rem)] font-bold leading-[0.8] mix-blend-overlay"
+        className="pointer-events-none fixed bottom-[0.5vw] left-0 z-[--heading-greater-z-index] text-[calc(18vw+0.5rem)] font-bold leading-[0.8] mix-blend-overlay"
         aria-hidden
       >
         Delectus

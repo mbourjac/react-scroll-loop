@@ -17,7 +17,7 @@ export const initialGalleryImages: GalleryImage[] = [
     width: 'large',
     aspectRatio: 3 / 4,
     marginTop: 'negative',
-    zIndex: 1,
+    zIndex: 'between',
     alignment: '100%',
   },
   {
@@ -28,7 +28,7 @@ export const initialGalleryImages: GalleryImage[] = [
     width: 'medium',
     aspectRatio: 2 / 3,
     marginTop: 'positive',
-    zIndex: 1,
+    zIndex: 'under',
     alignment: '15%',
   },
   {
@@ -39,7 +39,7 @@ export const initialGalleryImages: GalleryImage[] = [
     width: 'large',
     aspectRatio: 2 / 3,
     marginTop: 'negative',
-    zIndex: 1,
+    zIndex: 'over',
     alignment: '50%',
   },
   {
@@ -50,7 +50,7 @@ export const initialGalleryImages: GalleryImage[] = [
     width: 'x-large',
     aspectRatio: 3 / 4,
     marginTop: 'positive',
-    zIndex: 1,
+    zIndex: 'between',
     alignment: '100%',
   },
   {
@@ -61,7 +61,7 @@ export const initialGalleryImages: GalleryImage[] = [
     width: 'large',
     aspectRatio: 3 / 2,
     marginTop: 'negative',
-    zIndex: 1,
+    zIndex: 'between',
     alignment: '0%',
   },
   {
@@ -72,7 +72,7 @@ export const initialGalleryImages: GalleryImage[] = [
     width: 'large',
     aspectRatio: 2 / 3,
     marginTop: 'positive',
-    zIndex: 1,
+    zIndex: 'over',
     alignment: '85%',
   },
   {
@@ -83,7 +83,7 @@ export const initialGalleryImages: GalleryImage[] = [
     width: 'medium',
     aspectRatio: 3 / 2,
     marginTop: 'positive',
-    zIndex: 1,
+    zIndex: 'between',
     alignment: '15%',
   },
   {
@@ -94,7 +94,7 @@ export const initialGalleryImages: GalleryImage[] = [
     width: 'medium',
     aspectRatio: 2 / 3,
     marginTop: 'positive',
-    zIndex: 1,
+    zIndex: 'over',
     alignment: '0%',
   },
 ];

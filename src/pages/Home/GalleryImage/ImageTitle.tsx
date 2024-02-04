@@ -1,10 +1,11 @@
 import { useCallback, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useWindowSize } from '../../../hooks/use-window-size';
+import { cn } from '../../../lib/tailwind';
 
 type ImageTitleProps = {
   title: string;
-  zIndex: number;
+  zIndex: string;
   mousePosition: {
     mouseX: number;
     mouseY: number;
@@ -40,9 +41,11 @@ export const ImageTitle = ({
   return (
     titleSide && (
       <motion.p
-        className="pointer-events-none fixed left-0 top-0 text-[2rem] tracking-widest text-white [text-shadow:2px_2px_1px_rgba(0,0,0,0.8)]"
+        className={cn(
+          'pointer-events-none fixed left-0 top-0 text-[2rem] tracking-widest text-white [text-shadow:2px_2px_1px_rgba(0,0,0,0.8)]',
+          zIndex,
+        )}
         style={{
-          zIndex: zIndex + 1,
           x: `${titleSide === 'right' ? titleX : titleX - titleWidth}px`,
           y: `${titleY}px`,
         }}
