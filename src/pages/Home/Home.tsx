@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react';
-import Lenis from '@studio-freight/lenis';
 import { useIntersectionObserver } from '../../hooks/use-intersection-observer';
 import { GalleryImage } from './GalleryImage/GalleryImage';
 import { initialGalleryImages } from './Home.constants';
@@ -31,16 +30,7 @@ export const Home = () => {
     loopIteration.current++;
   }, [isVisible]);
 
-  useEffect(() => {
-    const lenis = new Lenis();
-
-    const raf = (time: number) => {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    };
-
-    requestAnimationFrame(raf);
-  }, []);
+ 
 
   return (
     <div className="relative p-4">

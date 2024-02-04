@@ -4,10 +4,15 @@ import {
   Route,
   RouterProvider,
 } from 'react-router-dom';
+import { AppLayout } from './layouts/AppLayout';
 import { Home } from './pages/Home/Home';
 
 const router = createBrowserRouter(
-  createRoutesFromElements(<Route index element={<Home />} />),
+  createRoutesFromElements(
+    <Route path="/" element={<AppLayout />}>
+      <Route index element={<Home />} />
+    </Route>,
+  ),
 );
 
 export const App = () => {
