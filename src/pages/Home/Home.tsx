@@ -30,8 +30,6 @@ export const Home = () => {
     loopIteration.current++;
   }, [isVisible]);
 
- 
-
   return (
     <div className="relative p-4">
       <h1 className="pointer-events-none fixed bottom-[16vw] left-[0.9vw] text-[calc(10vw+0.5rem)] font-bold leading-[0.8] mix-blend-overlay">
